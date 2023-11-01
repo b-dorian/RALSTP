@@ -1,7 +1,7 @@
 # RALSTP
 Recursive Agents and Landmarks Strategic-Tactical Planning (RALSTP) - Proof of Concept
 
-1. paths to optic-cplex, VAL_LATEST and TPSHE must be updated in ProblemGenerator.cpp
+1. paths to optic-cplex, VAL_LATEST and TPSHE must be updated in ProblemGenerator.cpp according to local path
 
 2. potentially rebuild VAL_LATEST and TPSHE individually
 
