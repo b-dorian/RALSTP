@@ -1686,7 +1686,7 @@ int main(int argc, char * argv[])
                 stringstream cmd;
                 std::time_t procedure_current_time = std::time(0);
                 double time_left = 1800 - (procedure_current_time - procedure_start_time);
-                cmd << "ulimit -t " << time_left << ";/home/nq/stp/temporal-landmarks/release/optic/./optic-clp -{" << node_id << agents_stream.str() << " -V" << procedure_start_time << dynamic_types_stream.str() << " -u -1" << " -K" << original_problem_file_name << " " << original_domain_file_name << " " << node << "active_agents_problem_" << original_problem_file_name << " >> " << original_problem_file_name << ".agents_dependencies_log";
+                cmd << "ulimit -t " << time_left << ";/home/nq/RALSTP/release/optic/./optic-clp -{" << node_id << agents_stream.str() << " -V" << procedure_start_time << dynamic_types_stream.str() << " -u -1" << " -K" << original_problem_file_name << " " << original_domain_file_name << " " << node << "active_agents_problem_" << original_problem_file_name << " >> " << original_problem_file_name << ".agents_dependencies_log";
                 cout << cmd.str() << endl;
                 runCommand(cmd.str());
                 exit(0);
@@ -1695,7 +1695,7 @@ int main(int argc, char * argv[])
             stringstream cmd;
             std::time_t procedure_current_time = std::time(0);
             double time_left = 1800 - (procedure_current_time - procedure_start_time);
-            cmd << "ulimit -t " << time_left << ";/home/nq/stp/temporal-landmarks/release/optic/./optic-clp -{" << node_id << agents_stream.str() << " -V" << procedure_start_time << dynamic_types_stream.str() << " -u" << " -K" << original_problem_file_name;
+            cmd << "ulimit -t " << time_left << ";/home/nq/RALSTP/release/optic/./optic-clp -{" << node_id << agents_stream.str() << " -V" << procedure_start_time << dynamic_types_stream.str() << " -u" << " -K" << original_problem_file_name;
             if (connected_map) { cmd << " -1" ;}
             cmd << " " << original_domain_file_name << " " << node << "active_agents_problem_" << original_problem_file_name << " >> " << original_problem_file_name << ".agents_dependencies_log";
             cout << cmd.str() << endl;
@@ -1799,7 +1799,7 @@ int main(int argc, char * argv[])
         // remove agent instances and goals from problem file
         std::time_t procedure_current_time = std::time(0);
         double time_left = 1800 - (procedure_current_time - procedure_start_time);
-        cmd << "ulimit -t " << time_left << ";/home/nq/stp/temporal-landmarks/release/optic/./optic-clp -{" << node_id << " -u -7";
+        cmd << "ulimit -t " << time_left << ";/home/nq/RALSTP/release/optic/./optic-clp -{" << node_id << " -u -7";
         if (connected_map) cmd << " -4";
         //add instantiated dynamic types
         cmd << " -K" << inputed_problem_name;
