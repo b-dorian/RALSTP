@@ -1,0 +1,4 @@
+#!/bin/bash
+cd release
+make clean -j1 parser
+make clean -j4 optic-clp

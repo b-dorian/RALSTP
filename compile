@@ -1,0 +1,4 @@
+rm -rf release;
+mkdir release;
+bash run-cmake-release;
+bash build-release;
