@@ -5,7 +5,7 @@ Recursive Agents and Landmarks Strategic-Tactical Planning (RALSTP) - Proof of C
 
 2. potentially rebuild VAL_LATEST and TPSHE individually
 
-3. run ./compile to build RALSTP
+3. run ./compile to build RALSTP (needs same libraries as optic-clp to be preinstalled)
 
 4. run ./ralstp <pddl_domain_file_name> <pddl_problem_file_name>
 
