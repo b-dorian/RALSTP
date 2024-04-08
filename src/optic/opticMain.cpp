@@ -1634,6 +1634,26 @@ int main(int argc, char * argv[])
             problem_name = node + "active_agents_problem_" + original_problem_file_name;
             problemGenerator = new ProblemGenerator(random, VAL::current_analysis->the_domain, VAL::current_analysis->the_problem, original_problem_file_name, original_domain_file_name, procedure_start_time, agents_structure,dynamic_types_vector);
 
+            //check if dead-end agent goals exist
+            bool has_dead_end_agent_goals = false;
+            for (int i = 0; i < toplevel_goals.size(); i++){
+                if (problemGenerator->isDeadEndAgentProposition(toplevel_goals[i])){has_dead_end_agent_goals = true;}
+            }
+            if (!has_dead_end_agent_goals) {
+                cout << "Planning Problem does NOT have dead-end agent goals, stopping RALSTP." << endl;
+                exit(1);
+            }
+
+
+            //check if mix parent-dead-end agent goals exist
+            bool has_mixed_goals = false;
+            for (int i = 0; i < toplevel_goals.size(); i++){
+                if ((problemGenerator->isDeadEndAgentProposition(toplevel_goals[i])) && (problemGenerator->isParentAgentProposition(toplevel_goals[i]))){has_mixed_goals = true;}
+            }
+            if (has_mixed_goals) {
+                cout << "Planning Problem hax mised dead-end agent and parent agent goals, stopping RALSTP." << endl;
+                exit(1);
+            }
 
             //create active agents problem
             cout << "import stage 1a start" << endl;
