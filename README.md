@@ -2,7 +2,7 @@
 Recursive Agents and Landmarks Strategic-Tactical Planning (RALSTP) - Proof of Concept
 
 
-Below is a bare-bones install description that will be updated soon:
+Below is a bare-bones install description:
 
 1. paths to optic-cplex, VAL_LATEST and TPSHE must be updated in ProblemGenerator.cpp according to local path
 
